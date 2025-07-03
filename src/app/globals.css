@@ -8,6 +8,9 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  height: 100%;
+}
 
 @theme {
   --color-black: #0f1729;

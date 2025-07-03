@@ -40,7 +40,7 @@ export default function Home() {
             <h1 className="title">Thành Phố Tội Lỗi</h1>
 
             <p>Thành Phố Tội Lỗi là một server GTA V Roleplay Việt Nam được xây dựng với mục tiêu mang đến một thế giới nhập vai chân thực, nơi mỗi người chơi đều có cơ hội bắt đầu một cuộc sống thứ hai theo cách của riêng mình. Lấy bối cảnh một thành phố hiện đại đầy biến động, thành phố mở ra một xã hội thu nhỏ với đủ mọi tầng lớp: từ cảnh sát, bác sĩ, doanh nhân, cho đến những băng đảng tội phạm nguy hiểm. Tham gia cùng chúng tôi để viết lên câu chuyện của chính mình và gặp gỡ thêm nhiều người bạn mới.</p>
-            <a href="https://cfx.re/join/g7jr5m" target="_blank" type="button" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:outline-none   shadow-lg  dark:shadow-lg dark:text-gray-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mt-6">PLAY NOW</a>
+            <a href="https://cfx.re/join/g7jr5m" target="_blank" type="button" className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:outline-none   shadow-lg  dark:shadow-lg font-medium rounded-lg text-sm px-10 py-2.5 text-center me-2 mt-6">PLAY NOW</a>
             <a href="https://discord.gg/RsPNrDWjZu" target="_blank" type="button" className="text-white   focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
               Tham gia discord
               <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -66,10 +66,11 @@ export default function Home() {
           </div> */}
 
 
+
           <div className="hero-section-002 flex flex-wrap" id="our-values">
             <h2 style={{ textAlign: "center" }} className="title-main">Giá trị & Mục tiêu</h2>
             <div className="section-col">
-              <h2 >XÂY DỰNG CỘNG ĐỒNG <span style={{ color: " rgba(214, 0, 0, 0.829)" }}>ROLEPLAY</span></h2>
+              <h2 style={{ fontSize: "2em" }}>XÂY DỰNG CỘNG ĐỒNG <span style={{ color: " rgba(214, 0, 0, 0.829)" }}>ROLEPLAY</span></h2>
               <p>Trong thế giới ảo rộng lớn, điều khiến một thành phố trở nên khác biệt không chỉ là đồ họa hay lối chơi – mà chính là cộng đồng. Chúng tôi hiểu rằng một cộng đồng mạnh không tự nhiên mà có. Nó được xây dựng từ sự tôn trọng, giao tiếp, và tinh thần nhập vai nghiêm túc của từng thành viên.
                 Tại đây, mỗi người chơi không chỉ là một nhân vật – mà là một phần của câu chuyện lớn. Bạn có thể trở thành bất kỳ ai: một cảnh sát tận tâm, một doanh nhân thành đạt, hay một kẻ nổi loạn mưu trí. Nhưng dù bạn là ai, bạn sẽ luôn được lắng nghe, hỗ trợ và tôn trọng.
                 Chúng tôi đặt mục tiêu tạo ra một môi trường nơi mọi người có thể sống đúng với vai diễn của mình – không bị phân biệt, không bị bỏ rơi. Cộng đồng của chúng tôi không chấp nhận sự độc hại, phá game hay phân biệt đối xử. Ở đây, mọi người cùng nhau viết nên những câu chuyện, xây dựng những mối quan hệ và phát triển thế giới nhập vai theo cách riêng.
@@ -85,7 +86,7 @@ export default function Home() {
               <p>Mỗi hành động đều mang trọng lượng, mỗi quyết định đều có hậu quả – đúng với tinh thần nhập vai chân thực.
                 Với chúng tôi, công bằng không chỉ là nguyên tắc – đó là cam kết, là kim chỉ nam trong mọi lựa chọn phát triển và điều hành cộng đồng.</p>
             </div>
-            
+
             <div className="section-image flex-3/3">
               <Image
                 src="/images/image2.jpg"
@@ -115,7 +116,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
       </main>
     </div>
   );

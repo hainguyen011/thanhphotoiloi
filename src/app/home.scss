@@ -21,12 +21,10 @@
         top: 0vh;
     }
 
-    main {
-        height: 100%;
-    }
+
 
     .hero-typho-001 {
-        margin-top: 15%;
+        margin-top: 10%;
         height: 50vh;
         width: 45%;
 
@@ -70,7 +68,7 @@
     .hero-section-001 {
         margin-top: 15%;
         gap: 40px;
-
+     
         .section-image {
 
             height: 40vh;
@@ -84,8 +82,12 @@
             }
         }
 
+        .section-col {
+
+        }
+
         .title-main {
-            font-size: 4em;
+            font-size: 3em;
             position: relative;
 
             &::before {

@@ -1,18 +1,47 @@
+import { useEffect, useState } from "react";
+import { redirect, RedirectType } from 'next/navigation'
 import "./AppHeader.scss"
 
 const AppHeader = () => {
-    return <div className="Header ">
+    const [scrollDirection, setScrollDirection] = useState< "default" |"up" | "down" | null>("default");
+    useEffect(() => {
+        let lastScrollY = window.scrollY;
+
+        const updateScrollDirection = () => {
+            const currentScrollY = window.scrollY;
+            if(window.scrollY === 0) {
+                setScrollDirection("default")
+            }
+            else if (currentScrollY > lastScrollY) {
+                setScrollDirection("down");
+            } else if (currentScrollY < lastScrollY) {
+                setScrollDirection("up");
+            } 
+            lastScrollY = currentScrollY;
+
+            console.log()
+        };
+
+        window.addEventListener("scroll", updateScrollDirection);
+
+        return () => {
+            window.removeEventListener("scroll", updateScrollDirection);
+        };
+    }, []);
+
+    
+    return <div className={"Header px-10 " + (scrollDirection === "down" ? "header-active ": " ") + (scrollDirection === "default" ? "fixed": "")}>
         <div className="container mx-auto h-full">
             <div className="header-content flex h-full justify-between items-center">
                 <div className="logo">
                     <h3>Thành Phố Tội Lỗi</h3>
                 </div>
 
-                <div>
-                    <ul  className="menu flex h-full  gap-x-5 ">
-                        <li>Cộng đồng</li>
-                        <li>Khám phá</li>
-                        <li>Đội ngũ phát triển</li>
+                <div className="h-full ">
+                    <ul className="menu px-20 flex h-full  items-center">
+                        <li className="h-full flex items-center"><span>Cộng đồng</span></li>
+                        <li className="h-full flex items-center"onClick={()=> redirect('/discover', RedirectType.replace)}><span>Khám phá</span></li>
+                        <li className="h-full flex items-center"><span>Đội ngũ phát triển</span></li>
                     </ul>
                 </div>
                 <div className="actions">

@@ -1,17 +1,60 @@
 .Header {
     width: 100%;
     height: 55px;
-    position: absolute;
+    position: fixed;
+    width: 100%;
+    background-color: red;
     left: 0;
-    top: 0;
-    border-bottom: 1px solid #ddd;
+    top: -55px;
     background: rgba(255, 255, 255, 0);
-
+    z-index: 9999;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4.7px);
     -webkit-backdrop-filter: blur(4.7px);
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.13);
+    transition: 0.23s ease-in-out;
 
+    &.fixed {
+        top: 0;
+        height: 80px;
+        ul {
+            li {
+                user-select: none;
+                &:hover {
+                    background-image: radial-gradient(
+                        circle farthest-corner at 50.3% 55.8%,
+                        rgba(239, 0, 0, 0.516) 0.8%,
+                        transparent 100.2%
+                    );
+                    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+                    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 0) 100%);
+                    -webkit-mask-repeat: no-repeat;
+                    mask-repeat: no-repeat;
+                    -webkit-mask-position: center;
+                    mask-position: center;
+                  
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 40px;
+                        height: 40px;
+
+                        left: calc(50% - 20px);
+                        // top: -50px;
+                        border: 8px solid rgba(192, 3, 3, 0.648);
+                        
+                        transform: rotateZ(45deg);
+                    }
+                 
+                }
+            }
+        }
+    }
+    &.header-active {
+        background-color: rgb(197, 6, 6);
+        top: 0;
+    }
     .actions {
         button {
             cursor: pointer;
@@ -27,13 +70,24 @@
     }
 
     .menu {
-       
+        overflow: hidden;
+        max-height: 80px;
+        height: 100%;
+
         ul {
             gap: 20px;
         }
 
         li {
             cursor: pointer;
+            position: relative;
+            text-transform: capitalize;
+            padding: 0px 10px;
+              transition: 0.5s ease-in-out;
+            span {
+                position: relative;
+                z-index: 20;
+            }
         }
     }
 }

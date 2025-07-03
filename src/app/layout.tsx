@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>
+      <body className="px-10">
         <ThemeModeProvider>
           {children}
           <Footer></Footer>

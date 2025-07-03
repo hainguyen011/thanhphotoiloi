@@ -1,0 +1,89 @@
+.Discover {
+    .overlay {
+        position: absolute;
+        width: 70%;
+        z-index: -1;
+        top: 0;
+        max-height: 100vh;
+        overflow: hidden;
+  
+        
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        left: calc(15%);
+        top: 10vh;
+    }
+    main {
+        .sm-banner {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            top: 0;
+            position: absolute;
+            left: 0;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 0% 0%;
+                filter: brightness(10%) grayscale(0.6)
+            }
+        }
+    }
+}
+
+.fade-edge {
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+}
+
+.fade-linear {
+    -webkit-mask-image:
+        linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%),
+        linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+    mask-image:
+        linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%),
+        linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+
+    -webkit-mask-composite: intersect;
+    mask-composite: intersect;
+
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+@keyframes neonFadeSlow {
+
+    0%,
+    5% {
+        opacity: 1;
+        // filter: brightness(1.2) saturate(1.4);
+    }
+
+    10% {
+        opacity: 0.7;
+        // filter: brightness(0.8);
+    }
+
+    15% {
+        opacity: 0.5;
+        // filter: brightness(0.5);
+    }
+
+    20%,
+    100% {
+        opacity: 1;
+        // filter: brightness(1.2) saturate(1.4);
+    }
+}
+
+.neon-fade-slow {
+    animation: neonFadeSlow 8s infinite ease-in-out;
+}
